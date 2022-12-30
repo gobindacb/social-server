@@ -60,7 +60,10 @@ mongoose
         useUnifiedTopology: true,
     })
     .then(() => {
-        
+
+        app.get('/', async (req, res) => {
+            res.send('Social Media server is running');
+        })
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
         /* ADD DATA ONE TIME */
